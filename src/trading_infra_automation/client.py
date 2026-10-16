@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from typing import Any, Optional
-from urllib import error, request
+from urllib import error, parse, request
 
 from .config import ClientConfig
 
@@ -41,21 +41,23 @@ class VegaTradeClient:
             "symbol": symbol,
             "side": side,
             "quantity": quantity,
-            "price": price,
             "type": order_type,
         }
+        if price is not None:
+            payload["price"] = price
         return self._request("POST", "/orders", payload=payload)
 
     def _request(self, method: str, path: str, *, params: Optional[dict[str, Any]] = None, payload: Optional[dict[str, Any]] = None) -> Any:
         endpoint = self.base_url + path
         if params:
-            query = "&".join(f"{key}={value}" for key, value in params.items())
-            endpoint = f"{endpoint}?{query}"
+            safe_params = {key: value for key, value in params.items() if value is not None}
+            if safe_params:
+                endpoint = f"{endpoint}?{parse.urlencode(safe_params, doseq=True)}"
 
         data = None
         headers = dict(self.config.headers)
         if payload is not None:
-            data = json.dumps(payload).encode("utf-8")
+            data = json.dumps({key: value for key, value in payload.items() if value is not None}).encode("utf-8")
 
         req = request.Request(endpoint, data=data, headers=headers, method=method)
         try:

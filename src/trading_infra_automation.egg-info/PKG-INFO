@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: trading-infra-automation
+Version: 0.1.0
+Summary: Python SDK for the VegaTrade trading API with infrastructure automation helpers.
+Author: Rafael Mejia Aguilar
+License: MIT
+Project-URL: Homepage, https://github.com/rafaelmejiaaguilar691-sudo/trading-infra-automation
+Project-URL: Repository, https://github.com/rafaelmejiaaguilar691-sudo/trading-infra-automation
+Keywords: trading,vega-trade,api,sdk
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Office/Business :: Financial
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: pytest>=8.0; extra == "test"
+
+# trading-infra-automation
+
+Python SDK for the VegaTrade trading API with automation helpers.
+
+## Supported Python versions
+
+This project supports Python 3.9 through 3.13 and includes CI coverage for each supported release.
+
+## Installation
+
+```bash
+python -m pip install -e .[test]
+```
+
+## Usage
+
+```python
+from trading_infra_automation import VegaTradeClient
+
+client = VegaTradeClient(api_key="your-api-key")
+print(client.ping())
+```
+
+## Project layout
+
+- `src/trading_infra_automation/` - Python SDK package
+- `src/vega_trade/` - compatibility import path
+- `.github/workflows/ci.yml` - GitHub Actions matrix for Python versions
+- `tox.ini` - local multi-version test configuration
+

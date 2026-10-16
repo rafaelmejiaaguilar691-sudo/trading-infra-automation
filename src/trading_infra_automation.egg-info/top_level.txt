@@ -1,0 +1,2 @@
+trading_infra_automation
+vega_trade

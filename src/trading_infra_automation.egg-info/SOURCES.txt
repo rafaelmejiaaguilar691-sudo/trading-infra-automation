@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/trading_infra_automation/__init__.py
+src/trading_infra_automation/client.py
+src/trading_infra_automation/config.py
+src/trading_infra_automation.egg-info/PKG-INFO
+src/trading_infra_automation.egg-info/SOURCES.txt
+src/trading_infra_automation.egg-info/dependency_links.txt
+src/trading_infra_automation.egg-info/requires.txt
+src/trading_infra_automation.egg-info/top_level.txt
+src/vega_trade/__init__.py
+tests/test_client.py

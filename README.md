@@ -4,7 +4,7 @@ Python SDK for the VegaTrade trading API with automation helpers.
 
 ## Supported Python versions
 
-This project supports Python 3.9 through 3.13 and includes CI coverage for each supported release.
+This project supports Python 3.9 through 3.14 and includes CI coverage for each supported release.
 
 ## Installation
 
@@ -27,4 +27,3 @@ print(client.ping())
 - `src/vega_trade/` - compatibility import path
 - `.github/workflows/ci.yml` - GitHub Actions matrix for Python versions
 - `tox.ini` - local multi-version test configuration
-
