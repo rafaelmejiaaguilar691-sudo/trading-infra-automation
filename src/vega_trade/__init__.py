@@ -12,7 +12,8 @@ __all__ = [
     "ClientConfig",
     "DEFAULT_BASE_URL",
     "DEFAULT_TIMEOUT",
-    "VegaTradeClient",
     "TradingInfraAutomationClient",
+    "VegaTradeClient",
 ]
+
 __version__ = "0.1.0"

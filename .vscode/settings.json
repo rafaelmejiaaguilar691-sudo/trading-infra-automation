@@ -48,5 +48,6 @@
         "searchAndCompare": true
     },
     "gitlens.views.formats.stashes.tooltip": "${link}${' on `'stashOnRef`}${'\\&nbsp;&nbsp;'changesDetail} \\ &nbsp;$(history) ${agoAndDate} ${message}${---footnotes}${commands}",
-    "gitlens.views.formats.stashes.label": "${message}${stashNumber}${tips}${changesShort}"
+    "gitlens.views.formats.stashes.label": "${message}${stashNumber}${tips}${changesShort}",
+    "C_Cpp.errorSquiggles": "disabled"
 }
