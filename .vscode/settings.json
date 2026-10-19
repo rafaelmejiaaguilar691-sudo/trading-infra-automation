@@ -1,0 +1,52 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/home/codespace/.python/current/bin/python": true,
+        "/^git status --short && printf '\\\\nExisting env directories:\\\\n' && ls -d \\.venv venv 2>/dev/null \\|\\| true$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^/workspaces/trading-infra-automation/\\.venv/bin/python -m pip install -e '\\.\\[test\\]'$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^pytest -q$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    },
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnPaste": true,
+    "gitlens.gitkraken.mcp.autoEnabled": true,
+    "gitlens.ai.defaultAgent": "ide-chat",
+    "gitlens.views.scm.grouped.default": "worktrees",
+    "gitlens.views.scm.grouped.hiddenViews": {
+        "commits": false,
+        "worktrees": false,
+        "branches": false,
+        "remotes": false,
+        "stashes": false,
+        "tags": false,
+        "contributors": false,
+        "repositories": true,
+        "fileHistory": false,
+        "launchpad": false,
+        "searchAndCompare": false
+    },
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "worktrees": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "contributors": true,
+        "repositories": true,
+        "fileHistory": true,
+        "launchpad": true,
+        "searchAndCompare": true
+    },
+    "gitlens.views.formats.stashes.tooltip": "${link}${' on `'stashOnRef`}${'\\&nbsp;&nbsp;'changesDetail} \\ &nbsp;$(history) ${agoAndDate} ${message}${---footnotes}${commands}",
+    "gitlens.views.formats.stashes.label": "${message}${stashNumber}${tips}${changesShort}"
+}
